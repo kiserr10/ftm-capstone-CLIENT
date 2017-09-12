@@ -1,16 +1,18 @@
 import React, { Component } from 'react';
-import '../App.css';
-import { ReactDOM, mountNode } from 'react-dom';
-import Header from './Header';
-import Chart from './Chart';
-import { getData } from './API';
+import { ReactDOM } from 'react-dom';
+import Header from '../Header/index.js';
+import Chart from '../Chart/index.js';
+import { getData } from '../API';
 
-class App extends Component {
-	constructor(){
-		super();
+class MarketInfo extends Component {
+	constructor(props){
+		super(props);
 		this.state = {
 			markets: [],
-			chartData: {}
+			chartData: {
+				labels: [],
+				datasets: []
+			}
 		};
 	}
 
@@ -22,11 +24,18 @@ class App extends Component {
 		getData()
 			.then(result => {
 				this.setState({
-					markets: result.data
+					market: result.data
 				});
-				console.log(result.data);
+				console.log(this.state.market);
+				console.log(result.data.farmer_products[0].quantity);
+				console.log(result.data.farmer_products[0].product.name);
+				const market = this.state.market;
+				// let productNames = market.map(data => {
+				// 	console.log(data);
+				// });
 			});
 	}
+
 
 
 
@@ -39,9 +48,9 @@ class App extends Component {
 						label: 'Product Distribution',
 						data: [
 							250,
-							500,
-							750,
-							25
+							250,
+							125,
+							750
 						],
 						backgroundColor:[
 							'red',
@@ -57,11 +66,10 @@ class App extends Component {
 	render() {
 		return (
 			<div>
-				<Header />
 				<Chart chartData={this.state.chartData} />
 			</div>
 		);
 	}
 }
 
-export default App;
+export default MarketInfo;
