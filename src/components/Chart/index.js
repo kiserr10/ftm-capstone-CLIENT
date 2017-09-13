@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Bar, Line, Pie, Doughnut } from 'react-chartjs-2';
+import { Bar, Line, Pie, Doughnut, Radar, Polar } from 'react-chartjs-2';
 import './Chart.css';
 
 class Chart extends Component{
@@ -18,6 +18,8 @@ class Chart extends Component{
 			<div className="product-chart">
 				<Doughnut
 					data={this.state.chartData}
+					width={50}
+					height={20}
 					options={{
 						title:{
 							display: true,
@@ -26,7 +28,26 @@ class Chart extends Component{
 						},
 						legend:{
 							display: true,
-							position: 'right'
+							position: 'top'
+						}
+					}}
+				/>
+				<br />
+				<br />
+
+				<Polar
+					data={this.state.chartData}
+					width={50}
+					height={20}
+					options={{
+						title:{
+							display: false,
+							text: 'Product Distribution',
+							fontSize:25
+						},
+						legend:{
+							display: true,
+							position: 'top'
 						}
 					}}
 				/>

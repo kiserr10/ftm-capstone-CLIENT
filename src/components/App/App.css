@@ -1,8 +1,21 @@
 body{
   background-image: url("../../images/img1opac.png");
 	background-repeat: no-repeat;
-	opacity: 50];
+	background-attachment: fixed;
+	opacity: 50;
 }
-/*.main-app.body{
-
-}*/
+.main-app-pic{
+	width: 100%;
+	-webkit-clip-path: polygon(100% 39%, 100% 100%, 0 100%, 0 68%);
+	clip-path: polygon(100% 39%, 100% 100%, 0 100%, 0 68%);
+	position:fixed;
+	bottom:0px;
+}
+.nav-bar{
+	margin:0;
+}
+.jumbotron{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
