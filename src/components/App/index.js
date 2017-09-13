@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
-import { ReactDOM } from 'react-dom';
+// import { ReactDOM } from 'react-dom';
 import Header from '../Header/index.js';
-import { getData } from '../API';
-import { Jumbotron, Button } from 'react-bootstrap';
+// import { getData } from '../API';
+import { Jumbotron } from 'react-bootstrap';
 
 class App extends Component {
 	render() {
@@ -17,7 +17,7 @@ class App extends Component {
 							<p>An Interactive Platform for Farmers, Markets, and Consumers</p>
 						</Jumbotron>
 					</div>
-					<img className="main-app-pic" src={require('../../images/image_5.jpg')}/>
+					<img className="main-app-pic" alt="farmers-market-background" src={require('../../images/image_5.jpg')}/>
 				</div>
 			</div>
 

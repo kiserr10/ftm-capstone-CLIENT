@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import { ReactDOM } from 'react-dom';
+// import { ReactDOM } from 'react-dom';
 import Chart from '../Chart/index.js';
 import Header from '../Header/index.js';
 import { getData } from '../API';
-import {Grid, Row, Well, Col, Panel, PanelGroup} from 'react-bootstrap';
+import {Panel, PanelGroup} from 'react-bootstrap';
 import './MarketInfo.css';
 
 class MarketInfo extends Component {
