@@ -9,6 +9,24 @@ export function getData(){
 	return axios.get(API_URL1);
 }
 
-export function postSignup(){
-	return axios.post(AUTH_URL);
+export function postSignup(user){
+	return axios.post(`${AUTH_URL}/signup`, user);
+}
+export function postLogin(credentials){
+	return axios.post(`${AUTH_URL}/login`, credentials)
+		.then(res => {
+			const {id, token} = res.data;
+			localStorage.setItem('Token', token);
+			localStorage.setItem('id', id);
+			setAuthToken(token);
+			console.log(token, id);
+		});
+}
+
+function setAuthToken(token){
+	if(token){
+		axios.defaults.headers.common["Authorization"] = `BEARER ${token}`;
+	} else {
+		delete axios.defaults.headers.common["Authorization"];
+	}
 }
