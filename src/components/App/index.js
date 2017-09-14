@@ -14,7 +14,7 @@ class App extends Component {
 					<div className="jumbotron-box col-6">
 						<Jumbotron>
 							<h1>Farm To Market</h1>
-							<p>An Interactive Platform for Farmers, Markets, and Consumers</p>
+							<p>An Platform for Farmers, Markets, and Consumers</p>
 						</Jumbotron>
 					</div>
 					<img className="main-app-pic" alt="farmers-market-background" src={require('../../images/image_5.jpg')}/>

@@ -19,7 +19,7 @@ class Chart extends Component{
 				<Doughnut
 					data={this.state.chartData}
 					width={50}
-					height={20}
+					height={30}
 					options={{
 						title:{
 							display: true,
@@ -38,7 +38,7 @@ class Chart extends Component{
 				<Polar
 					data={this.state.chartData}
 					width={50}
-					height={20}
+					height={30}
 					options={{
 						title:{
 							display: false,
