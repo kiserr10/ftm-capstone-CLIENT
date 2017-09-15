@@ -11,6 +11,7 @@ class MarketInfo extends Component {
 		this.getChartData = this.getChartData.bind(this);
 		this.state = {
 			markets: [],
+			market: {},
 			chartData: {},
 			labels: [],
 			datasets: [],
@@ -26,10 +27,15 @@ class MarketInfo extends Component {
 	componentDidMount(){
 		getData()
 			.then(result => {
+				const market = result.data.filter(market =>{
+					return market.id === +this.props.match.params.id;
+				})[0];
+				console.log(market, this.props.match, result.data);
 				this.setState({
 					markets: result.data,
-					farmers: result.data.farmers,
-					products: result.data.farmer_products
+					market,
+					farmers: market.farmers,
+					products: market.farmer_products
 				});
 				// const market = this.state.markets;
 				// const farmer = this.state.farmers;
@@ -99,12 +105,12 @@ class MarketInfo extends Component {
 				<div className="info row">
 					<div className="left-column col-md-6">
 						<div className="info-table-1 well">
-							<h1>{this.state.markets.name}</h1>
+							<h1>{this.state.market.name}</h1>
 							<PanelGroup>
-								<Panel header="Address">{this.state.markets.address}</Panel>
-								<Panel header="Schedule">{this.state.markets.schedule}</Panel>
-								<Panel header="Description">{this.state.markets.description}</Panel>
-								<Panel header="Google Maps Link">{this.state.markets.google_map_link}</Panel>
+								<Panel header="Address">{this.state.market.address}</Panel>
+								<Panel header="Schedule">{this.state.market.schedule}</Panel>
+								<Panel header="Description">{this.state.market.description}</Panel>
+								<Panel header="Google Maps Link">{this.state.market.google_map_link}</Panel>
 							</PanelGroup>
 						</div>
 

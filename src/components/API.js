@@ -1,9 +1,8 @@
 import axios from 'axios';
 
-const id = 1;
-const API_URL1 = `http://localhost:3000/api/v1/markets/${id}`;
+const API_URL1 = `http://localhost:3000/api/v1/markets/`;
 // const API_URL2 = `http://localhost:3000/api/v1/farmers`;
-const API_URL3 = `http://localhost:3000/api/v1/accounts`;
+const API_URL3 = `http://localhost:3000/api/v1/accounts/`;
 const AUTH_URL = `http://localhost:3000/auth/`;
 
 export function getData(){

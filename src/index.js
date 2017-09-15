@@ -18,7 +18,7 @@ ReactDOM.render(
 	<Router>
 		<div>
 			<Route exact path='/' component={App}/>
-			<Route path='/marketInfo' component={MarketInfo}/>
+			<Route path='/marketInfo/:id' component={MarketInfo}/>
 			<Route path='/profile' component={Profile}/>
 			<Route path='/createProfile' component={CreateProfile}/>
 		</div>
