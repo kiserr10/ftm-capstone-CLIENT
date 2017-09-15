@@ -5,7 +5,6 @@ import Header from '../Header/index.js';
 import { getData } from '../API';
 import { Panel, PanelGroup, Thumbnail } from 'react-bootstrap';
 import './MarketInfo.css';
-
 class MarketInfo extends Component {
 	constructor(props){
 		super(props);
@@ -36,14 +35,7 @@ class MarketInfo extends Component {
 				const farmer = this.state.farmers;
 				this.makeFarmerPanels(this.state.farmers, this.state.products);
 			});
-
-
-
 	}
-
-
-
-
 
 	getChartData(){
 		this.setState({
