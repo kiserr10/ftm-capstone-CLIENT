@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import Chart from '../Chart/index.js';
 import Header from '../Header/index.js';
 import { getData } from '../API';
-import { Panel, PanelGroup, Image, Thumbnail } from 'react-bootstrap';
+import { Panel, PanelGroup, Thumbnail } from 'react-bootstrap';
 import './MarketInfo.css';
 
 class MarketInfo extends Component {

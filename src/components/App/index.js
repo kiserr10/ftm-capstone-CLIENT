@@ -17,10 +17,9 @@ class App extends Component {
 							<p>An Platform for Farmers, Markets, and Consumers</p>
 						</Jumbotron>
 					</div>
-					<img className="main-app-pic" alt="farmers-market-background" src={require('../../images/image_5.jpg')}/>
+					<img className="main-app-pic" alt="farmers-market-background" src={require('../../images/clip-image-1.png')}/>
 				</div>
 			</div>
-
 		);
 	}
 }
