@@ -1,33 +1,25 @@
 import React, { Component } from 'react';
-import { ReactDOM, mountNode }from 'react-dom';
-import { Popover, Tooltip, Button, Modal, MenuItem, OverlayTrigger, Example } from 'react-bootstrap';
+// import { ReactDOM, mountNode }from 'react-dom';
+import { Button, Modal } from 'react-bootstrap';
 import './FormModal.css';
-import SignupForm from '../SignupForm/index';
+// import SignupForm from '../SignupForm/index';
 import LoginForm from '../LoginForm/index';
 
-const FormModal = React.createClass({
-	getInitialState() {
-		return { showModal: false };
-	},
+class FormModal extends Component {
+	constructor(){
+		super();
+		this.state = {
+			showModal: false
+		};
+	}
 	close() {
 		this.setState({ showModal: false });
-	},
+	}
 	open() {
 		this.setState({ showModal: true });
-	},
+	}
 
 	render() {
-		const popover = (
-			<Popover id="modal-popover" title="popover">
-				very popover. such engagement
-			</Popover>
-		);
-		const tooltip = (
-			<Tooltip id="modal-tooltip">
-				wow.
-			</Tooltip>
-		);
-
 		return (
 			<div>
 				<Button
@@ -37,7 +29,6 @@ const FormModal = React.createClass({
 				>
 					Login
 				</Button>
-
 				<Modal show={this.state.showModal} onHide={this.close}>
 					<Modal.Header closeButton>
 						<Modal.Title>Signup Form</Modal.Title>
@@ -52,6 +43,6 @@ const FormModal = React.createClass({
 			</div>
 		);
 	}
-});
+}
 
 export default FormModal;

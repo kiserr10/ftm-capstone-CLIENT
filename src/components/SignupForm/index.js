@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { ReactDOM, mountNode }from 'react-dom';
-import { FormGroup, ControlLabel, HelpBlock, Checkbox, Radio, Button, FormControl } from 'react-bootstrap';
+// import { ReactDOM, mountNode }from 'react-dom';
+import { FormGroup, ControlLabel, HelpBlock, Button, FormControl } from 'react-bootstrap';
 import './SignupForm.css';
 import { postSignup } from '../API';
 import { Redirect } from 'react-router-dom';

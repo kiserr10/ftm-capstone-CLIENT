@@ -31,8 +31,8 @@ class MarketInfo extends Component {
 					farmers: result.data.farmers,
 					products: result.data.farmer_products
 				});
-				const market = this.state.markets;
-				const farmer = this.state.farmers;
+				// const market = this.state.markets;
+				// const farmer = this.state.farmers;
 				this.makeFarmerPanels(this.state.farmers, this.state.products);
 			});
 	}

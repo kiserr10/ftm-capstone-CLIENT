@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
+import { Navbar, Nav, NavItem, NavDropdown, MenuItem, Button } from 'react-bootstrap';
 // import { ReactDOM, mountNode }from 'react-dom';a
 import './Header.css';
 import FormModal from '../FormModal/index';
 import FormModal2 from '../FormModal2/index';
+import {logoutUser} from '../API';
 import {
 	// BrowserRouter as Router,
 	// Route,
@@ -32,7 +33,15 @@ class Header extends Component{
 								<MenuItem eventKey={3.2}><FormModal2 /></MenuItem>
 								<MenuItem eventKey={3.3}>Extras</MenuItem>
 								<MenuItem divider />
-								<MenuItem eventKey={3.3}>Home</MenuItem>
+								<MenuItem eventKey={3.4}>
+									<Button
+										bsStyle="primary"
+										bsSize="small"
+										onClick={logoutUser}
+									>
+										Logout
+									</Button>
+								</MenuItem>
 							</NavDropdown>
 						</Nav>
 					</Navbar.Collapse>
