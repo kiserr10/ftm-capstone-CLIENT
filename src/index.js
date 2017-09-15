@@ -11,6 +11,7 @@ import {
 
 import MarketInfo from './components/MarketInfo/';
 import Profile from './components/Profile/';
+import CreateProfile from './components/CreateProfile';
 
 
 ReactDOM.render(
@@ -19,6 +20,7 @@ ReactDOM.render(
 			<Route exact path='/' component={App}/>
 			<Route path='/marketInfo' component={MarketInfo}/>
 			<Route path='/profile' component={Profile}/>
+			<Route path='/createProfile' component={CreateProfile}/>
 		</div>
 	</Router>
 	, document.getElementById('root'));

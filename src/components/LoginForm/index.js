@@ -3,7 +3,7 @@ import { ReactDOM, mountNode }from 'react-dom';
 import { FormGroup, ControlLabel, HelpBlock, Checkbox, Radio, Button, FormControl } from 'react-bootstrap';
 import './LoginForm.css';
 import { postLogin } from '../API';
-import {Redirect} from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 
 
 function FieldGroup({ id, label, help, ...props }) {

@@ -10,7 +10,14 @@ export function getData(){
 }
 
 export function postSignup(user){
-	return axios.post(`${AUTH_URL}/signup`, user);
+	return axios.post(`${AUTH_URL}/signup`, user)
+		.then(res => {
+			const {id, token} = res.data;
+			localStorage.setItem('Token', token);
+			localStorage.setItem('id', id);
+			setAuthToken(token);
+			console.log(token, id);
+		});
 }
 export function postLogin(credentials){
 	return axios.post(`${AUTH_URL}/login`, credentials)
