@@ -20,18 +20,19 @@ class Profile extends Component{
 	constructor(props){
 		super(props);
 		this.state = {
-			accounts: []
+			account: []
 		};
 	}
 
 	componentDidMount(){
-		getAccountData()
+		getAccountData(localStorage.id)
 			.then(result =>{
 				this.setState({
-					accounts: result.data,
+					account: result.data,
+					first_name: result.data.first_name
 
 				});
-				console.log(this.state.accounts);
+				console.log(this.state.account);
 			});
 	}
 
@@ -41,7 +42,7 @@ class Profile extends Component{
 		return (
 			<div>
 				<Header />
-				<h1>Welcome Back!</h1>
+				<h1>Welcome Back {this.state.first_name} !</h1>
 			</div>
 		);
 	}

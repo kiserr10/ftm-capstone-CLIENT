@@ -6,17 +6,23 @@ import './FormModal.css';
 import LoginForm from '../LoginForm/index';
 
 class FormModal extends Component {
-	constructor(){
-		super();
+	constructor(props){
+		super(props);
+		this.open = this.open.bind(this);
+		this.close = this.close.bind(this);
 		this.state = {
 			showModal: false
 		};
 	}
 	close() {
-		this.setState({ showModal: false });
+		this.setState({
+			showModal: false
+		});
 	}
 	open() {
-		this.setState({ showModal: true });
+		this.setState({
+			showModal: true
+		});
 	}
 
 	render() {

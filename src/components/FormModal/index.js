@@ -8,11 +8,12 @@ import SignupForm from '../SignupForm/index';
 class FormModal extends Component{
 	constructor(){
 		super();
+		this.open = this.open.bind(this);
+		this.close = this.close.bind(this);
 		this.state = {
 			showModal: false
 		};
 	}
-
 	close() {
 		this.setState({ showModal: false });
 	}

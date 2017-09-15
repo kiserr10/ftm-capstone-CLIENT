@@ -9,8 +9,8 @@ const AUTH_URL = `http://localhost:3000/auth/`;
 export function getData(){
 	return axios.get(API_URL1);
 }
-export function getAccountData(){
-	return axios.get(API_URL3);
+export function getAccountData(id){
+	return axios.get(`${API_URL3}/${id}`);
 }
 
 export function postSignup(user){
