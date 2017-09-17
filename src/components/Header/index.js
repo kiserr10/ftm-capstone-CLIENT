@@ -20,7 +20,7 @@ class Header extends Component{
 				<Navbar inverse collapseOnSelect>
 					<Navbar.Header>
 						<Navbar.Brand>
-							<h1><Link className="main-home-link" to="/">Farm To Market</Link></h1>
+							<h1><Link className="main-home-link" to="/">Home</Link></h1>
 						</Navbar.Brand>
 						<Navbar.Toggle />
 					</Navbar.Header>
@@ -28,10 +28,10 @@ class Header extends Component{
 						<Nav pullRight>
 							<NavItem componentClass="nav-link" eventKey={1} href="/"><Link className="info-link" to="/">Login</Link></NavItem>
 							<NavItem componentClass="nav-link" eventKey={2} href="./marketInfo"><Link className="info-link" to="/marketInfo">Market Info</Link></NavItem>
-							<NavDropdown eventKey={3} title="Account" id="basic-nav-dropdown">
+							<NavDropdown componentClass="nav-link" eventKey={3} title="Account" id="basic-nav-dropdown">
 								<MenuItem eventKey={3.1}><FormModal /></MenuItem>
 								<MenuItem eventKey={3.2}><FormModal2 /></MenuItem>
-								<MenuItem eventKey={3.3}>Extras</MenuItem>
+								<MenuItem eventKey={3.2}>Extras</MenuItem>
 								<MenuItem divider />
 								<MenuItem eventKey={3.4}>
 									<Button
