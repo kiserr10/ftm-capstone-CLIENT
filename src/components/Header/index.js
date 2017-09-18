@@ -4,7 +4,8 @@ import { Navbar, Nav, NavItem, NavDropdown, MenuItem, Button } from 'react-boots
 import './Header.css';
 import FormModal from '../FormModal/index';
 import FormModal2 from '../FormModal2/index';
-import {logoutUser} from '../API';
+import { logoutUser } from '../API';
+import { Redirect } from 'react-router-dom';
 import {
 	// BrowserRouter as Router,
 	// Route,
@@ -13,8 +14,27 @@ import {
 
 
 class Header extends Component{
+	constructor(props){
+		super(props);
+		this.redirect = this.redirect.bind(this);
+		this.state = {
+			redirect: false
+		};
+	}
+
+	redirect(){
+		logoutUser();
+		this.setState({
+			redirect: true
+		});
+	}
 
 	render(){
+		if(this.state.redirect){
+			return(
+				<Redirect push to= {'/'} />
+			);
+		}
 		return (
 			<div>
 				<Navbar inverse collapseOnSelect>
@@ -37,7 +57,7 @@ class Header extends Component{
 									<Button
 										bsStyle="primary"
 										bsSize="small"
-										onClick={logoutUser}
+										onClick={this.redirect}
 									>
 										Logout
 									</Button>

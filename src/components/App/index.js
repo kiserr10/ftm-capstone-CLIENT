@@ -3,7 +3,7 @@ import './App.css';
 // import { ReactDOM } from 'react-dom';
 import Header from '../Header/index.js';
 // import { getData } from '../API';
-import { FormControl, Thumbnail, Grid, Row, Col } from 'react-bootstrap';
+import { FormControl, Thumbnail, Grid, Row, Col, Well} from 'react-bootstrap';
 import { getData } from '../API';
 class App extends Component {
 	constructor(props){
@@ -13,6 +13,8 @@ class App extends Component {
 			markets: []
 		};
 	}
+
+
 
 	componentDidMount(){
 		getData()
@@ -52,19 +54,19 @@ class App extends Component {
 						<Row>
 							<Col xs={6} md={4}>
 								<Thumbnail className="info-block" src={require('../../images/image_2.jpg')} alt="242x200">
-									<h3>About</h3>
+									<h1>About</h1>
 									<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>
 								</Thumbnail>
 							</Col>
 							<Col xs={6} md={4}>
 								<Thumbnail className="info-block" src={require('../../images/image_4.jpg')} alt="242x200">
-									<h3>How We Work</h3>
+									<h1>How We Work</h1>
 									<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>
 								</Thumbnail>
 							</Col>
 							<Col xs={6} md={4}>
 								<Thumbnail className="info-block" src={require('../../images/image_3.jpg')} alt="242x200">
-									<h3>Find A Market</h3>
+									<h1>Find A Market</h1>
 									<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>
 								</Thumbnail>
 							</Col>
@@ -72,10 +74,13 @@ class App extends Component {
 					</Grid>
 				</div>
 				<div className="dropdown-container">
-					<FormControl className="market-dropdown" componentClass="select" placeholder="select" onChange={this.selectFarm}>
-						<option value="select">select</option>
-						{this.makeDropDownItems()}
-					</FormControl>
+					<Well>
+						<h1>Featured Market List: </h1>
+						<FormControl componentClass="select" placeholder="select" onChange={this.selectFarm}>
+							<option value="select">select</option>
+							{this.makeDropDownItems()}
+						</FormControl>
+					</Well>
 				</div>
 				<div className="main-app-pic-container">
 					<img className="main-app-pic" alt="farmers-market-background" src={require('../../images/clip-image-1.png')}/>

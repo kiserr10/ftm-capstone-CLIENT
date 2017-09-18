@@ -30,7 +30,6 @@ class Profile extends Component{
 				this.setState({
 					account: result.data,
 					first_name: result.data.first_name
-
 				});
 				console.log(this.state.account);
 			});

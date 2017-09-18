@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const API_URL1 = `http://localhost:3000/api/v1/markets/`;
-// const API_URL2 = `http://localhost:3000/api/v1/farmers`;
+const API_URL2 = `http://localhost:3000/api/v1/farmers`;
 const API_URL3 = `http://localhost:3000/api/v1/accounts/`;
 const AUTH_URL = `http://localhost:3000/auth/`;
 
@@ -30,6 +30,13 @@ export function postLogin(credentials){
 			localStorage.setItem('id', id);
 			setAuthToken(token);
 			console.log(token, id);
+		});
+}
+
+export function postCreateProfile(profile){
+	return axios.post(`${API_URL2}`, profile)
+		.then(res =>{
+			console.log("hey");
 		});
 }
 
