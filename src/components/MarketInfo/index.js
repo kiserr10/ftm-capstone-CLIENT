@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Iframe from 'react-iframe';
 // import { ReactDOM } from 'react-dom';
 import Chart from '../Chart/index.js';
 import Header from '../Header/index.js';
@@ -110,7 +111,14 @@ class MarketInfo extends Component {
 								<Panel header="Address">{this.state.market.address}</Panel>
 								<Panel header="Schedule">{this.state.market.schedule}</Panel>
 								<Panel header="Description">{this.state.market.description}</Panel>
-								<Panel header="Google Maps Link">{this.state.market.google_map_link}</Panel>
+								<Panel header="Google Map">
+									<Iframe url={this.state.market.google_map_link}
+										width="450px"
+										height="450px"
+										display="initial"
+										position="relative"
+										allowFullScreen/>
+								</Panel>
 							</PanelGroup>
 						</div>
 
