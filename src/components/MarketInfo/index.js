@@ -108,17 +108,20 @@ class MarketInfo extends Component {
 						<div className="info-table-1 well">
 							<h1>{this.state.market.name}</h1>
 							<PanelGroup>
+								<Panel header="Google Map">
+									<div className="map-container">
+										<Iframe
+											url={this.state.market.google_map_link}
+											width="750px"
+											height="450px"
+											display="initial"
+											position="relative"
+											allowFullScreen/>=
+									</div>
+								</Panel>
 								<Panel header="Address">{this.state.market.address}</Panel>
 								<Panel header="Schedule">{this.state.market.schedule}</Panel>
 								<Panel header="Description">{this.state.market.description}</Panel>
-								<Panel header="Google Map">
-									<Iframe url={this.state.market.google_map_link}
-										width="450px"
-										height="450px"
-										display="initial"
-										position="relative"
-										allowFullScreen/>
-								</Panel>
 							</PanelGroup>
 						</div>
 

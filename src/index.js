@@ -15,7 +15,7 @@ import CreateProfile from './components/CreateProfile';
 
 
 ReactDOM.render(
-	<Router>
+	<Router onUpdate={() => window.scrollTo(0, 0)}>
 		<div>
 			<Route exact path='/' component={App}/>
 			<Route path='/marketInfo/:id' component={MarketInfo}/>

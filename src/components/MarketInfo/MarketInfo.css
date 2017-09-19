@@ -10,3 +10,15 @@
 .product-info-card{
 	margin-top: 1em;
 }
+.panel-heading{
+	font-size: 25px;
+}
+.panel-body{
+	font-size: 20px;
+}
+.map-container{
+	display: flex;
+	justify-content: center;
+	position: relative;
+	overflow: hidden;
+}

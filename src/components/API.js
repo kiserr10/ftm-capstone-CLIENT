@@ -11,6 +11,9 @@ export function getData(){
 export function getAccountData(id){
 	return axios.get(`${API_URL3}/${id}`);
 }
+export function getFarmerData(id){
+	return axios.get(`${API_URL2}/${id}`);
+}
 
 export function postSignup(user){
 	return axios.post(`${AUTH_URL}/signup`, user)

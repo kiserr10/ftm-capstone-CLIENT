@@ -24,11 +24,14 @@ class Chart extends Component{
 						title:{
 							display: true,
 							text: 'Product Distribution',
-							fontSize:25
+							fontSize: 30
 						},
 						legend:{
 							display: true,
-							position: 'top'
+							position: 'top',
+							labels: {
+								fontSize: 22
+							}
 						}
 					}}
 				/>
@@ -47,7 +50,10 @@ class Chart extends Component{
 						},
 						legend:{
 							display: true,
-							position: 'top'
+							position: 'top',
+							labels: {
+								fontSize: 22
+							}
 						}
 					}}
 				/>

@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import { FormGroup, ControlLabel, HelpBlock, Button, FormControl } from 'react-bootstrap';
-import {getAccountData} from '../API';
+import { getAccountData } from '../API';
 // import { ReactDOM, mountNode }from 'react-dom';a
 import './CreateProfile.css';
 // import FormModal from '../FormModal/index';
 // import FormModal2 from '../FormModal2/index';
 import Header from '../Header';
-import {postCreateProfile} from  '../API';
-import {getData} from '../API';
+import { postCreateProfile } from  '../API';
+import { getData } from '../API';
+import { Redirect } from 'react-router-dom';
 // import {
 // 	BrowserRouter as Router,
 // 	Route,
@@ -34,7 +35,8 @@ class CreateProfile extends Component{
 		this.onFormSubmit = this.onFormSubmit.bind(this);
 		this.makeDropDownItems = this.makeDropDownItems.bind(this);
 		this.selectFarm = this.selectFarm.bind(this);
-		// this.helperMarket = this.helperMarket.bind(this);
+		this.handleATChange = this.handleATChange.bind(this);
+		this.redirect = this.redirect.bind(this);
 		this.state = {
 			account: [],
 			account_id: null,
@@ -51,10 +53,7 @@ class CreateProfile extends Component{
 					rating: null,
 					growing_location: ''
 				},
-			markets: [{
-				id: null,
-				attend_date: ''
-			}]
+			markets: []
 		};
 	}
 
@@ -115,28 +114,53 @@ class CreateProfile extends Component{
 		this.setState({products});
 		console.log(this.state);
 	}
+	handleATChange(e){
+		e.preventDefault();
+		var attend_date = {...this.state.markets.attend_date};
+		attend_date = e.target.value;
+		this.setState({attend_date});
+		console.log(this.state.attend_date);
+	}
 
 	onFormSubmit(event){
 		event.preventDefault();
 		console.log('hello');
-		const {account_id, biography, name, farm_name, products, markets, attend_date} = this.state;
-		postCreateProfile({account_id, biography, name, farm_name, products, markets, attend_date})
+		const {account_id, biography, name, farm_name, products, markets} = this.state;
+		console.log(markets);
+		postCreateProfile({account_id, biography, name, farm_name, products, markets})
 			.then(console.log('posted'));
 	}
 	makeDropDownItems(){
 		return this.state.markets.map(market =>{
 			return (
-				<option key={market.id} value={market.id}>{market.name}</option>
+				<option key={market.id} value={market.id} placeholder={market.name}>{market.name}</option>
 			);
 		});
 	}
 	selectFarm(e){
-		console.log(e.target.value);
-
+		// var market = this.state.markets;
+		// console.log(e.target.value);
+		this.setState({
+			markets: [{
+				id: e.target.value,
+				attend_date: "9/19/2017"
+			}]
+		});
+		console.log(this.state.markets);
+	}
+	redirect(){
+		this.setState({
+			redirect: true
+		});
 	}
 
 
 	render(){
+		if(this.state.redirect){
+			return(
+				<Redirect push to= {'/'} />
+			);
+		}
 		return (
 			<div>
 				<Header />
@@ -203,9 +227,15 @@ class CreateProfile extends Component{
 						name="growing_location"
 						value={this.state.products.growing_location}
 					/>
+					<FieldGroup
+						id="formControlsText"
+						name="attend_date"
+						type="text"
+						label="Attend Date"
+						placeholder="Attend Date"
+					/>
 
 					<FieldGroup
-						onChange={this.handleChange}
 						id="formControlsFile"
 						type="file"
 						name="image_url"
@@ -215,34 +245,16 @@ class CreateProfile extends Component{
 
 					<FormGroup controlId="formControlsSelect">
 						<ControlLabel>Select</ControlLabel>
-						<FormControl componentClass="select" placeholder="select" onClick={this.helperMarket} onChange={this.selectFarm}>
-							<option value="select">select</option>
+						<FormControl componentClass="select" onChange={this.selectFarm} >
+							<option value="select">Select A Market</option>
 							{this.makeDropDownItems()}
 						</FormControl>
 					</FormGroup>
 
-					<FieldGroup
-						onChange={this.handleChange}
-						id="formControlsText"
-						name="attend_date"
-						type="text"
-						label="Attend Date"
-						placeholder="Farm Name"
-						value={this.state.attend_date}
-					/>
-
-					<FormGroup controlId="formControlsSelectMultiple">
-						<ControlLabel>Multiple select</ControlLabel>
-						<FormControl componentClass="select" multiple>
-							<option value="select">select (multiple)</option>
-							<option value="other">...</option>
-						</FormControl>
-					</FormGroup>
-
 					<FormGroup>
-						<ControlLabel>Static text</ControlLabel>
+						<ControlLabel>Email Contact: </ControlLabel>
 						<FormControl.Static>
-							email@example.com
+							{this.state.account.email}
 						</FormControl.Static>
 					</FormGroup>
 
