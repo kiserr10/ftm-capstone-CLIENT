@@ -165,12 +165,12 @@ class CreateProfile extends Component{
 			<div>
 				<Header />
 				<h1 className="welcome-header">Welcome {this.state.first_name}! Please Make A Profile</h1>
-				<form className="profile-creation-form">
+				<form className="profile-creation-form" autocomplete="off">
 					<FieldGroup
 						onChange={this.handleChange}
 						id="formControlsText"
 						name="farm_name"
-						type="text"
+						type="hidden"
 						label="Name of Your Farm"
 						placeholder="Farm Name"
 						value={this.state.farm_name}
@@ -258,7 +258,7 @@ class CreateProfile extends Component{
 						</FormControl.Static>
 					</FormGroup>
 
-					<Button onClick={this.onFormSubmit} type="submit">
+					<Button onClick={this.redirect} type="submit">
 					Submit Form
 					</Button>
 				</form>

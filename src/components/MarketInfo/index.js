@@ -47,7 +47,7 @@ class MarketInfo extends Component {
 	getChartData(){
 		this.setState({
 			chartData: {
-				labels: ['Beets', 'Arugula', 'Heirloom Tomatoes', 'Almonds', 'Heirloom Carrots'],
+				labels: ['Root Vegetables', 'Stem/Leaf Vegetables', 'Berry Fruits', 'Nut Fruits', 'Fruit Vegetables', 'Flower Vegetables', 'Seed Vegetables'],
 				datasets: [
 					{
 						label: 'Product Distribution',
@@ -56,14 +56,18 @@ class MarketInfo extends Component {
 							250,
 							125,
 							750,
-							365
+							365,
+							320,
+							85
 						],
 						backgroundColor:[
 							'red',
-							'green',
-							'blue',
 							'orange',
-							'crimson'
+							'yellow',
+							'green',
+							'lightblue',
+							'blue',
+							'purple'
 						]
 					}
 				]
@@ -134,8 +138,9 @@ class MarketInfo extends Component {
 						</div>
 					</div>
 
+
 					<div className="row">
-						<div className="info-table-2 col-md-6">
+						<div className="info-table-2 col-md-7">
 							<h1>Attending Farmers: </h1>
 							<PanelGroup>
 								{this.state.farmerPanels}

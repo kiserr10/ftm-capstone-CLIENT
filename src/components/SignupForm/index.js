@@ -60,7 +60,7 @@ class SignupForm extends Component {
 					onChange={this.handleChange}
 					id="formControlsText"
 					name="first_name"
-					type="text"
+					type="hidden"
 					label="First Name"
 					placeholder="Enter text"
 					value={this.state.first_name}

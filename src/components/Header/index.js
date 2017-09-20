@@ -60,6 +60,20 @@ class Header extends Component{
 									</Button>
 								</MenuItem>
 							</NavDropdown>
+							<NavDropdown componentClass="nav-link" eventKey={3} title="Farmer Account" id="basic-nav-dropdown">
+								<MenuItem eventKey={3.1}><FormModal /></MenuItem>
+								<MenuItem eventKey={3.2}><FormModal2 /></MenuItem>
+								<MenuItem divider />
+								<MenuItem eventKey={3.4}>
+									<Button
+										bsStyle="primary"
+										bsSize="small"
+										onClick={this.redirect}
+									>
+										Logout
+									</Button>
+								</MenuItem>
+							</NavDropdown>
 						</Nav>
 					</Navbar.Collapse>
 				</Navbar>
