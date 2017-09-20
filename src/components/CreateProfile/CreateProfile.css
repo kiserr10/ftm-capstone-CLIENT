@@ -3,3 +3,14 @@
 	margin-left: 15em;
 	margin-top: 5em;
 }
+.control-label{
+	font-size: 20px;
+}
+.btn-default{
+	font-size: 18px;
+	margin-left: 3em;
+	margin-bottom: 4em;
+}
+.welcome-header{
+	margin-left: 2em;
+}

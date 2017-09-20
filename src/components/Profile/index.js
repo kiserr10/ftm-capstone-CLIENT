@@ -59,7 +59,7 @@ class Profile extends Component{
 		return (
 			<div>
 				<Header />
-				<h1>Welcome Back {this.state.first_name} !</h1>
+				<h1 className="welcome-header">Welcome Back {this.state.first_name} !</h1>
 				<Well>
 					<div className="profile-info-well row">
 						<div className="col-md-6">

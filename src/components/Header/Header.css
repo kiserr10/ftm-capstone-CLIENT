@@ -15,3 +15,45 @@
 	margin-left: 5em;
 	margin-right: 5em;
 }
+.btn-primary{
+	font-size: 18px;
+}
+.btn-primary:hover{
+	background: none;
+	color: brown;
+	border: none;
+}
+
+.main-home-link{
+	color: black;
+	-webkit-transition: color .6s;
+}
+.dropdown-toggle{
+	color: black;
+	-webkit-transition: color .6s;
+}
+.dropdown-toggle:hover{
+	text-decoration: none;
+	color: brown;
+	-webkit-transition: color .6s;
+}
+.main-home-link:hover{
+	text-decoration: none;
+	color: brown;
+	-webkit-transition: color .6s;
+}
+.navbar-inverse .navbar-nav>li>a:focus, .navbar-inverse .navbar-nav>li>a:hover{
+	color: brown;
+}
+.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover{
+	color: brown;
+	background-color: transparent;
+}
+.btn.btn-sm.btn-primary:active{
+	background-color: #7f330a;
+}
+.navbar-brand{
+	padding: 0;
+	margin: 1em;
+	line-height: normal;
+}

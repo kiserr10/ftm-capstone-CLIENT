@@ -164,7 +164,7 @@ class CreateProfile extends Component{
 		return (
 			<div>
 				<Header />
-				<h1>Welcome {this.state.first_name}! Please Make A Profile</h1>
+				<h1 className="welcome-header">Welcome {this.state.first_name}! Please Make A Profile</h1>
 				<form className="profile-creation-form">
 					<FieldGroup
 						onChange={this.handleChange}
@@ -259,7 +259,7 @@ class CreateProfile extends Component{
 					</FormGroup>
 
 					<Button onClick={this.onFormSubmit} type="submit">
-					Submit
+					Submit Form
 					</Button>
 				</form>
 			</div>

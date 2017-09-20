@@ -10,15 +10,29 @@
 .product-info-card{
 	margin-top: 1em;
 }
-.panel-heading{
+
+.panel-default{
 	font-size: 25px;
 }
-.panel-body{
-	font-size: 20px;
+.panel{
+	background-color: rgba(255, 255, 255, 0.30);
 }
 .map-container{
 	display: flex;
 	justify-content: center;
 	position: relative;
 	overflow: hidden;
+}
+.panel-default>.panel-heading{
+	background-color: rgba(152, 125, 125, 0.30);
+}
+.panel-title{
+	font-size: 25px;
+}
+a{
+	font-size: 25px;
+}
+.thumbnail{
+	background-color: none;
+	border: none;
 }

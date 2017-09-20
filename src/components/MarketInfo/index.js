@@ -105,9 +105,9 @@ class MarketInfo extends Component {
 				<Header />
 				<div className="info row">
 					<div className="left-column col-md-6">
-						<div className="info-table-1 well">
+						<div className="info-table-1">
 							<h1>{this.state.market.name}</h1>
-							<PanelGroup>
+							<PanelGroup className="grouping-panels">
 								<Panel header="Google Map">
 									<div className="map-container">
 										<Iframe
@@ -116,19 +116,12 @@ class MarketInfo extends Component {
 											height="450px"
 											display="initial"
 											position="relative"
-											allowFullScreen/>=
+											allowFullScreen/>
 									</div>
 								</Panel>
 								<Panel header="Address">{this.state.market.address}</Panel>
 								<Panel header="Schedule">{this.state.market.schedule}</Panel>
 								<Panel header="Description">{this.state.market.description}</Panel>
-							</PanelGroup>
-						</div>
-
-						<div className="info-table-2 well">
-							<h1>Attending Farmers: </h1>
-							<PanelGroup>
-								{this.state.farmerPanels}
 							</PanelGroup>
 						</div>
 					</div>
@@ -138,6 +131,15 @@ class MarketInfo extends Component {
 							<div className="pie-chart-container">
 								<Chart chartData={this.state.chartData} />
 							</div>
+						</div>
+					</div>
+
+					<div className="row">
+						<div className="info-table-2 col-md-6">
+							<h1>Attending Farmers: </h1>
+							<PanelGroup>
+								{this.state.farmerPanels}
+							</PanelGroup>
 						</div>
 					</div>
 				</div>
