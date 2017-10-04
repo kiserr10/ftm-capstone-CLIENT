@@ -55,15 +55,16 @@ class SignupForm extends Component {
 			);
 		}
 		return(
-			<form onSubmit={this.onSubmit}>
+			<form onSubmit={this.onSubmit} >
 				<FieldGroup
 					onChange={this.handleChange}
 					id="formControlsText"
 					name="first_name"
-					type="hidden"
+					type="text"
 					label="First Name"
 					placeholder="Enter text"
 					value={this.state.first_name}
+					autoComplete="off"
 				/>
 				<FieldGroup
 					onChange={this.handleChange}
@@ -73,6 +74,7 @@ class SignupForm extends Component {
 					label="Last Name"
 					placeholder="Enter text"
 					value={this.state.last_name}
+					autoComplete="off"
 				/>
 				<FieldGroup
 					onChange={this.handleChange}
@@ -82,6 +84,7 @@ class SignupForm extends Component {
 					label="Email Address"
 					placeholder="Enter email"
 					value={this.state.email}
+					autoComplete="off"
 				/>
 				<FieldGroup
 					onChange={this.handleChange}
@@ -90,6 +93,7 @@ class SignupForm extends Component {
 					label="Password"
 					type="password"
 					value={this.state.password}
+					autoComplete="off"
 				/>
 				<Button type="submit">
 					Submit

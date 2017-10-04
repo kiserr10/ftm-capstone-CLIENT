@@ -52,13 +52,13 @@ class MarketInfo extends Component {
 					{
 						label: 'Product Distribution',
 						data: [
+							550,
 							250,
-							250,
-							125,
-							750,
+							225,
+							340,
 							365,
 							320,
-							85
+							283
 						],
 						backgroundColor:[
 							'red',

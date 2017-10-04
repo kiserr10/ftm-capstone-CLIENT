@@ -55,19 +55,22 @@ class App extends Component {
 							<Col xs={6} md={4}>
 								<Thumbnail className="info-block" src={require('../../images/image_2.jpg')} alt="242x200">
 									<h1>About</h1>
-									<p className="main-info-text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>
+									<p className="main-info-text">Farm To Market is an interactive platform for farmers to share information with consumers and farmers markets. We invite you to search for a market in your area and/or click on any one of our featured markets, to get specific information about that event.  Information on attending farmers is shown as well, in addition to information about their products.  Please make an account with us to enjoy the full Farm To Market experience.  </p>
+									<p className="main-info-text"></p>
 								</Thumbnail>
 							</Col>
 							<Col xs={6} md={4}>
 								<Thumbnail className="info-block" src={require('../../images/image_4.jpg')} alt="242x200">
 									<h1>How We Work</h1>
-									<p className="main-info-text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>
+									<p className="main-info-text">Farm To Market is an interactive platform for farmers to share information with consumers and farmers markets. We invite you to search for a market in your area and/or click on any one of our featured markets, to get specific information about that event.  Information on attending farmers is shown as well, in addition to information about their products.  Please make an account with us to enjoy the full Farm To Market experience.  </p>
+									<p className="main-info-text"></p>
 								</Thumbnail>
 							</Col>
 							<Col xs={6} md={4}>
 								<Thumbnail className="info-block" src={require('../../images/image_3.jpg')} alt="242x200">
 									<h1>Find A Market</h1>
-									<p className="main-info-text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>
+									<p className="main-info-text">Farm To Market is an interactive platform for farmers to share information with consumers and farmers markets. We invite you to search for a market in your area and/or click on any one of our featured markets, to get specific information about that event.  Information on attending farmers is shown as well, in addition to information about their products.  Please make an account with us to enjoy the full Farm To Market experience.  </p>
+									<p className="main-info-text"></p>
 								</Thumbnail>
 							</Col>
 						</Row>

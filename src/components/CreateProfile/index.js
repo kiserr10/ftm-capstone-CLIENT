@@ -170,10 +170,10 @@ class CreateProfile extends Component{
 						onChange={this.handleChange}
 						id="formControlsText"
 						name="farm_name"
-						type="hidden"
 						label="Name of Your Farm"
 						placeholder="Farm Name"
 						value={this.state.farm_name}
+						autoComplete="off"
 					/>
 					<FormGroup controlId="formControlsTextarea">
 						<ControlLabel>Biography</ControlLabel>
@@ -183,6 +183,7 @@ class CreateProfile extends Component{
 							name="biography"
 							type="text"
 							value={this.state.biography}
+							autoComplete="off"
 						/>
 					</FormGroup>
 
@@ -193,6 +194,7 @@ class CreateProfile extends Component{
 						type="text"
 						label="Product Name:"
 						value={this.state.products.name}
+						autoComplete="off"
 					/>
 					<FieldGroup
 						onChange={this.handleDescriptionChange}
@@ -201,6 +203,7 @@ class CreateProfile extends Component{
 						label="Product Description:"
 						name="description"
 						value={this.state.products.description}
+						autoComplete="off"
 					/>
 					<FieldGroup
 						id="formControlsText"
@@ -208,6 +211,7 @@ class CreateProfile extends Component{
 						label="Image URL:"
 						name="image_url"
 						placeholder="URL Goes Here"
+						autoComplete="off"
 					/>
 					<FieldGroup
 						onChange={this.handleQuantityChange}
@@ -217,6 +221,7 @@ class CreateProfile extends Component{
 						placeholder="Number"
 						name="quantity"
 						value={this.state.products.quantity}
+						autoComplete="off"
 
 					/>
 					<FieldGroup
@@ -226,6 +231,7 @@ class CreateProfile extends Component{
 						label="Growing Location"
 						name="growing_location"
 						value={this.state.products.growing_location}
+						autoComplete="off"
 					/>
 					<FieldGroup
 						id="formControlsText"
@@ -233,6 +239,7 @@ class CreateProfile extends Component{
 						type="text"
 						label="Attend Date"
 						placeholder="Attend Date"
+						autoComplete="off"
 					/>
 
 					<FieldGroup
